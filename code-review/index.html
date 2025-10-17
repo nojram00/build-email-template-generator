@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Generator</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form is="x-csv" class="inputs-container">
+            <input type="text" name="header" is="x-input" target="header" placeholder="Header">
+            <input type="text" name="branch" is="x-input" target="branch" placeholder="Branch">
+            <input type="text" name="build" is="x-input" target="build" placeholder="Build">
+            <input type="text" name="pr-url" is="x-input" target="pr-url" placeholder="Pull Request URL">
+            <div class="row">
+                <label for="color">Header Background</label>
+                <input type="color" is="x-color" id="color" target="table-header">
+            </div>
+            <div>
+                <button type="button" is="x-cpb" target="table-1">Copy</button>
+                <button>Create CSV</button>
+            </div>
+        </form>
+        <div id="table-1">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" id="table-header"><span id="header">&lt;Header&gt;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-header">
+                            Branch
+                        </td>
+                        <td>
+                            <span id="branch"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Build</td>
+                        <td>
+                            <span id="build"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Pull Request URL</td>
+                        <td>
+                            <a href="" is="x-anc" id="pr-url"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Generator</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="inputs-container">
+            <input type="text" is="x-input" target="header" placeholder="Header">
+            <input type="text" is="x-input" target="server" placeholder="Server">
+            <input type="text" is="x-input" target="branch" placeholder="Branch">
+            <input type="text" is="x-input" target="build" placeholder="Build">
+            <input type="text" is="x-input" target="directory" placeholder="Directory">
+            <input type="text" is="x-input" target="notes" placeholder="Build Notes">
+            <input type="text" is="x-input" target="modules" placeholder="Modules Affected">
+            <div class="row">
+                <label for="color">Header Background</label>
+                <input type="color" is="x-color" id="color" target="table-header">
+            </div>
+            <div>
+                <button type="button" is="x-cpb" target="table-1">Copy</button>
+            </div>
+        </div>
+        <div id="table-1">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" id="table-header"><span id="header">&lt;Header&gt;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-header">Server</td>
+                        <td>
+                            <a is="x-anc" id="server"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">
+                            Branch
+                        </td>
+                        <td>
+                            <span id="branch"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Build</td>
+                        <td>
+                            <span id="build"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Directory</td>
+                        <td>
+                            <span id="directory"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Build Notes and Script to Run</td>
+                        <td>
+                            <span id="directory"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-header">Modules that might be affected</td>
+                        <td>
+                            <span id="modules"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
